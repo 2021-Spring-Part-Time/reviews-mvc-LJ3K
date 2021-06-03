@@ -9,8 +9,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
-import javax.servlet.http.PushBuilder;
-import javax.swing.plaf.PanelUI;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -33,6 +31,11 @@ public class ReviewControllerMvcTest {
 
     @Mock
     private Review reviewTwo;
+
+    public ReviewControllerMvcTest(MockMvc mockMvc, ReviewRepository reviewRepo) {
+        this.mockMvc = mockMvc;
+        this.reviewRepo = reviewRepo;
+    }
 
     @Test
     public void shouldBeOkForAllReviewsInTheReviewsTemplate() throws Exception {

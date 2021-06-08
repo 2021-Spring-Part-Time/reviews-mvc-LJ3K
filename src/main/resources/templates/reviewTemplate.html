@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${reviewModel.type}">A review</title>
+</head>
+<body>
+
+<header>
+    <h1 th:text="${reviewModel.type}">A review</h1>
+</header>
+
+<main>
+    <ol>
+        <p><a href="/reviews">reviews</a></p>
+        <li th:text="${reviewModel.type}"></li>
+    </ol>
+    <h2 th:text="${reviewModel.category}"></h2>
+</main>
+
+<footer>
+    <small>&copy Lawrence Jones 2021</small>
+</footer>
+
+</body>
+</html>
